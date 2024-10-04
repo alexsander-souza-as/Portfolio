@@ -471,7 +471,11 @@ footer {
         display: block;
     }
 
-    .nav-responsive, .nav-responsive a {
+    .nav-responsive {
+        display: none;
+    }
+
+    .nav-responsive a {
         display: none;
     }
 
