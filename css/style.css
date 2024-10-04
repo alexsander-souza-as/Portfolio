@@ -75,7 +75,7 @@ header {
     padding: 0.5rem 1rem;
     transition: 0.4s;
 
-    /*border: var(--color-02);*/
+    border: var(--color-02);
 }
 
 .nav a:hover, .nav-responsive a:hover {
@@ -128,7 +128,7 @@ span {
     font-weight: 700;
     font-size: 1.6rem var(--main-color);
 
-    font-size: 2.7rem; /* TEST */;
+    font-size: 2.7rem; /* TEST */
 }
 
 .home-content h3, .about-content h3 {
@@ -471,11 +471,7 @@ footer {
         display: block;
     }
 
-    .nav-responsive {
-        display: none;
-    }
-
-    .nav-responsive a {
+    .nav-responsive, .nav-responsive a {
         display: none;
     }
 
