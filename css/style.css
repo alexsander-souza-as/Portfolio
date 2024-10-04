@@ -503,9 +503,10 @@ footer {
 
 /* Large (lg): Notebook */
 @media (min-width: 992px) {
-    /* .home-img, .about-img {
-        max-width: 35%;*/
+        .home-img, .about-img {
+        max-width: 35%;
     }
+}
 
     .services-container {
         flex-direction: row;
