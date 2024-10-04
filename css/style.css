@@ -367,7 +367,7 @@ footer {
 }
 /* ----- /button ----- */
 
-/* ===== menu hamburguer */
+/* ===== menu hamburguer ===== */
 .menu-hamburguer {
     display: none;
     cursor: pointer;
@@ -390,7 +390,7 @@ footer {
 .change .bar3 {
     transform: translate(0, -0.65rem) rotate(45deg);
 }
-/* ===== /menu hamburguer */
+/* ===== /menu hamburguer ===== */
 
 /* ===== media queries ===== */
 
