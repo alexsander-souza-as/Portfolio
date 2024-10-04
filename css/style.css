@@ -91,8 +91,8 @@ span {
 }
 
 .home-img {
-    border-right: solid 0.4rem var(--main-color);
-    border-bottom: solid 0.4rem var(--main-color);
+    border-right: solid 0.6rem var(--main-color);
+    border-bottom: solid 0.6rem var(--main-color);
     border-image: linear-gradient(125deg, transparent 50%, var(--main-color)) 1;
 }
 
@@ -140,7 +140,7 @@ span {
 }
 
 .services-container {
-    display: flex;
+    display: fles;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -394,6 +394,48 @@ footer {
         display: none;
     }
 
+    .nav-responsive {
+        display: block;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+
+    section {
+        padding: 6rem 2.5rem;
+    }
+
+    .home, .about {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .home-img, .about-img {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    .home-content, .about-content {
+        width: 100%;
+    }
+
+    .home-content div {
+        text-align: center;
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-box {
+        width: 100%;
+    }
 
 
     header {
@@ -403,7 +445,14 @@ footer {
 
 /* Small (sm): Smartphone (landscape) */
 @media (min-width: 576px) {
+    .home-img, .about-img {
+        width: 65%;
+        max-width: 65%;
+    }
 
+    .services-box {
+        width: 70%;
+    }
 
     header {
         background-color: var(--color-02); /* TEST */
@@ -412,7 +461,48 @@ footer {
 
 /* Medium (md): Tablet */
 @media (min-width: 768px) {
+    .menu-hamburguer {
+        display: none;
+    }
 
+    .nav {
+        display: block;
+    }
+
+    .nav-responsive, .nav-responsive a {
+        display: none;
+    }
+
+    .home, .about {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .home-img, .about-img {
+        max-width: 35%;
+    }
+
+    .home-content, .about-content {
+        width: 50%;
+    }
+
+    /*     .services-container {
+        flex-direction: column;
+        align-items: center;
+    } */
+
+    .services-box {
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: auto auto;
+    }
+
+    form .input-box input {
+        width: 49%;
+    }
 
     header {
         background-color: var(--color-03); /* TEST */
