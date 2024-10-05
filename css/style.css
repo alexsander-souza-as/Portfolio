@@ -191,7 +191,7 @@ span {
     letter-spacing: 0.1rem;
     /* N lines ... */
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -390,13 +390,13 @@ footer {
 .change .bar3 {
     transform: translate(0, -0.65rem) rotate(45deg);
 }
-/* ===== /menu hamburguer ===== */
+/* ===== /menu hamburger ===== */
 
 /* ===== media queries ===== */
 
 /* Extra Small (xs): Smartphone (portrait) */
 @media (min-width: 0px) {
-    .menu-hamburguer {
+    .menu-hamburger {
         display: block;
     }
 }
