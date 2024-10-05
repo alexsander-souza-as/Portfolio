@@ -49,7 +49,7 @@ header {
     align-items: center;
     z-index: 100;
     
-    border: solid 1px var(--color-02); /* TEST */
+    /*border: solid 1px var(--color-02); /* TEST */
 }
 
 .logo {
@@ -59,7 +59,17 @@ header {
     cursor: default;
 }
 
-.nav a {
+.nav-responsive {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--bg-color-01);
+}
+
+.nav a, .nav-responsive a {
     font-size: 1.2rem;
     color: var(--text-color);
     padding: 0.5rem 1rem;
@@ -68,7 +78,7 @@ header {
     border: var(--color-02);
 }
 
-.nav a:hover {
+.nav a:hover, .nav-responsive a:hover {
     color: var(--main-color);
 }
 
@@ -76,7 +86,7 @@ section {
     min-height: 100vh;
     padding: 6rem 6rem 2rem;
 
-    border: solid 1px var(--color-02); /* TEST */
+    /* border: solid 1px var(--color-02); /* TEST */
 }
 
 span {
@@ -91,8 +101,8 @@ span {
 }
 
 .home-img {
-    border-right: solid 0.4rem var(--main-color);
-    border-bottom: solid 0.4rem var(--main-color);
+    border-right: solid 0.6rem var(--main-color);
+    border-bottom: solid 0.6rem var(--main-color);
     border-image: linear-gradient(125deg, transparent 50%, var(--main-color)) 1;
 }
 
@@ -118,7 +128,7 @@ span {
     font-weight: 700;
     font-size: 1.6rem var(--main-color);
 
-    font-size: 2.7rem; /* TEST */;
+    font-size: 2.7rem; /* TEST */
 }
 
 .home-content h3, .about-content h3 {
@@ -181,7 +191,7 @@ span {
     letter-spacing: 0.1rem;
     /* N lines ... */
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -357,7 +367,7 @@ footer {
 }
 /* ----- /button ----- */
 
-/* ===== menu hamburguer */
+/* ===== menu hamburguer ===== */
 .menu-hamburguer {
     display: none;
     cursor: pointer;
@@ -380,60 +390,146 @@ footer {
 .change .bar3 {
     transform: translate(0, -0.65rem) rotate(45deg);
 }
-/* ===== /menu hamburguer */
+/* ===== /menu hamburger ===== */
 
 /* ===== media queries ===== */
 
 /* Extra Small (xs): Smartphone (portrait) */
 @media (min-width: 0px) {
-    .menu-hamburguer {
+    .menu-hamburger {
         display: block;
     }
+}
 
     .nav {
         display: none;
     }
 
-
-
-    header {
-        background-color: var(--color-01); /* TEST */
+    .nav-responsive a {
+        display: block;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
     }
-}
+
+    section {
+        padding: 6rem 2.5rem;
+    }
+
+    .home, .about {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .home-img, .about-img {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    .home-content, .about-content {
+        width: 100%;
+    }
+
+    .home-content div {
+        text-align: center;
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-box {
+        width: 100%;
+    }
 
 /* Small (sm): Smartphone (landscape) */
 @media (min-width: 576px) {
-
-
-    header {
-        background-color: var(--color-02); /* TEST */
+    .home-img, .about-img {
+        width: 65%;
+        max-width: 65%;
     }
 }
+
+    .services-box {
+        width: 70%;
+    }
 
 /* Medium (md): Tablet */
 @media (min-width: 768px) {
-
-
-    header {
-        background-color: var(--color-03); /* TEST */
+    .menu-hamburguer {
+        display: none;
     }
 }
+
+    .nav {
+        display: block;
+    }
+
+    .nav-responsive, .nav-responsive a {
+        display: none;
+    }
+
+    .home, .about {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .home-img, .about-img {
+        max-width: 35%;
+    }
+
+    .home-content, .about-content {
+        width: 50%;
+    }
+
+    .services-box {
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: auto auto;
+    }
+
+    form .input-box input {
+        width: 49%;
+    }
 
 /* Large (lg): Notebook */
 @media (min-width: 992px) {
-
-
-    header {
-        background-color: var(--color-04); /* TEST */
+        .home-img, .about-img {
+        max-width: 35%;
     }
 }
+
+    .services-container {
+        flex-direction: row;
+        gap: 1.2rem;
+    }
 
 /* Extra Large (xl): Desktop */
 @media (min-width: 1200px) {
-
-
-    header {
-        background-color: var(--color-05); /* TEST */
+    .home-img, .about-img {
+        max-width: 25%;
     }
 }
+
+    .home-content h1 {
+        font-size: 2.7rem;        
+    }
+
+    .home-content h3 {
+        font-size: 2rem;        
+    }
+
+    .portfolio-container {
+        grid-template-columns: auto auto auto;
+    }
+
 /* ===== /media queries ===== */
